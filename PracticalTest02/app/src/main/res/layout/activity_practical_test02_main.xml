@@ -1,18 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PracticalTest02MainActivity">
+    tools:context=".PracticalTest02MainActivity"
+    tools:ignore="MissingClass">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Insert port..."
+        android:id="@+id/port_editview"/>
+
+    <EditText
+        android:id="@+id/valute_editext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Choose a valute"
+        android:layout_below="@+id/port_editview"
+        android:layout_marginTop="20dp"/>
+
+    <Spinner
+        android:id="@+id/information_type_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/information_types"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_below="@+id/valute_editext"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/connect_to_server"
+        android:layout_below="@+id/information_type_spinner"
+        android:text="Connect to server"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/initial_the_cerere"
+        android:layout_below="@+id/connect_to_server"
+        android:text="Initialize"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Result"
+        android:textSize="20sp"
+        android:layout_below="@+id/initial_the_cerere"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
